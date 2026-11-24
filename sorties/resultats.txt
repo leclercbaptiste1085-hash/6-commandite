@@ -1,0 +1,38 @@
+Exercice 2024 : performance 2.88 €/action, 3 % x performance x 103.4 M actions = 8.9 M€ avant plafond 
+Exercice 2025 : performance 13.69 €/action, 3 % x performance x 103.4 M actions = 42.5 M€ avant plafond 
+Montants publiés : 11,3 M€ pour 2024 ; 30,9 M€ pour 2025 (plafond de 10 % du résultat net de 308,8 M€) 
+PBG 2024 : officielle 376 M€, recalculée 298 M€ 
+PBG 2025 : officielle 1479 M€, recalculée 1415 M€ 
+Le DEU 2025 indique aussi qu'aucun dividende n'a été dû aux commandités au titre de 2020 à 2023 ; recalcul : 2020 -16.5 €, 2021 -23.9 €, 2022 -23.5 €, 2023 -9.7 € 
+Exercices 2003-2025 où la performance est positive : 15 sur 24 
+Cours actuel 36.58 € ; rendement du dividende 5.7 % ; volatilité annuelle historique (2006-2025) 26 % 
+Valeur du droit (k = 8 %, g = 2 %) : moyenne 116 M€, médiane 106 M€, intervalle 10-90 % : 36 à 208 M€ 
+Compensation en actions au cours actuel : 465 M€ (19/10) puis 416 M€ (18/11) 
+Variante où le dividende de l'exercice de référence est compté (2024 : 14,5 M€ au lieu de 8,9) : moyenne 144 M€ 
+Borne haute, si le plafond de 10 % du résultat était atteint chaque année (k = 8 %, g = 2 %) : 525 M€ 
+Sensibilité (M€) : 
+  k = 6 %, g = 0 % : 105 
+  k = 7 %, g = 0 % : 103 
+  k = 8 %, g = 0 % : 100 
+  k = 9 %, g = 0 % : 98 
+  k = 10 %, g = 0 % : 95 
+  k = 6 %, g = 2 % : 120 
+  k = 7 %, g = 2 % : 118 
+  k = 8 %, g = 2 % : 115 
+  k = 9 %, g = 2 % : 113 
+  k = 10 %, g = 2 % : 110 
+  k = 6 %, g = 4 % : 134 
+  k = 7 %, g = 4 % : 133 
+  k = 8 %, g = 4 % : 131 
+  k = 9 %, g = 4 % : 129 
+  k = 10 %, g = 4 % : 126 
+Indice de prix base 100 au 2000-01-03 : CAC 40 = 138 
+Indice de prix base 100 au 2000-01-03 : Hermès = 2633 
+Indice de prix base 100 au 2000-01-03 : Michelin = 330 
+Indice de prix base 100 au 2000-01-03 : Rubis = 627 
+Commandite agroforestière, bois à 600 €/m3 : TRI de l'écart 6.3 %, TRI des commanditaires 5.8 %, apport maximal 3748 €/ha 
+Part des commandités : 3990 €/ha à la coupe, soit 683 € actualisés à 4 % ; pour 1 000 ha, apport des commanditaires 3.7 M€ 
+Bois à 300 €/m3 : TRI des commanditaires 4.0 %, part des commandités 990 €/ha 
+Bois à 1000 €/m3 : TRI des commanditaires 7.2 %, part des commandités 7990 €/ha 
+Blé en crise (1 200 €/ha), bois à 600 : TRI des commanditaires 6.4 % 
+Prix du bois incertain (médiane 600 €/m3) : TRI médian des commanditaires 5.9 %, 10-90 % : 4.3 à 7.5 %, probabilité de rester sous 3 % : 1 % 
