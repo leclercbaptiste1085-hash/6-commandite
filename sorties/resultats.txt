@@ -30,9 +30,10 @@ Indice de prix base 100 au 2000-01-03 : CAC 40 = 138
 Indice de prix base 100 au 2000-01-03 : Hermès = 2633 
 Indice de prix base 100 au 2000-01-03 : Michelin = 330 
 Indice de prix base 100 au 2000-01-03 : Rubis = 627 
-Commandite agroforestière, bois à 600 €/m3 : TRI de l'écart 6.3 %, TRI des commanditaires 5.8 %, apport maximal 3748 €/ha 
-Part des commandités : 3990 €/ha à la coupe, soit 683 € actualisés à 4 % ; pour 1 000 ha, apport des commanditaires 3.7 M€ 
-Bois à 300 €/m3 : TRI des commanditaires 4.0 %, part des commandités 990 €/ha 
-Bois à 1000 €/m3 : TRI des commanditaires 7.2 %, part des commandités 7990 €/ha 
-Blé en crise (1 200 €/ha), bois à 600 : TRI des commanditaires 6.4 % 
-Prix du bois incertain (médiane 600 €/m3) : TRI médian des commanditaires 5.9 %, 10-90 % : 4.3 à 7.5 %, probabilité de rester sous 3 % : 1 % 
+Laminaire : 0.31 MWh PCS de méthane par tonne fraîche ; valeur en biométhane 36 €/t, en bio-GNL 22 à 62 €/t, en alginates 131 €/t 
+Coût de production européen : 1 150 à 4 370 €/t fraîche, soit 32 à 121 fois la valeur énergétique 
+Toute la récolte française (65 000 t) méthanisée : 20 GWh ; toute la production chinoise (24,3 Mt) : 7.6 TWh 
+Méthaniseur portuaire de 5 GWh : investissement 2.9 M€, marge d'exploitation 338 k€/an ; TRI du projet 8.1 %, des commanditaires 7.2 % 
+Part de l'exploitant commandité : 427 k€ sur 15 ans 
+Coût incertain (90-125 €/MWh) et volume de déchets incertain (± 15 %) : TRI médian des commanditaires 6.9 %, 10-90 % : 3.5 à 11.4 %, probabilité de perte 1 % 
+Résidus d'algues nécessaires pour 5 GWh à eux seuls (0,19 m3 CH4/kg MO après extraction) : 23675 t fraîches 

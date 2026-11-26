@@ -17,10 +17,11 @@ anonyme lors de l'assemblée générale du **9 décembre 2026**.
 Le projet procède en trois temps. Il retrace d'abord l'histoire de ce contrat, de la *commenda* des marchands de Venise et
 de Gênes jusqu'au Code de commerce. Il mesure ensuite ce que valait, chez Rubis, le droit des associés commandités, en
 reproduisant la formule de l'article 56 des statuts puis en simulant vingt mille trajectoires du cours de bourse, afin de
-le comparer à l'indemnité proposée. Il construit enfin une commandite type pour la terre, à partir des flux du projet
-précédent, et indique ce qu'il faudrait pour en bâtir une pour la mer.
+le comparer à l'indemnité proposée. Il se tourne enfin vers la mer, regarde ce que la Chine et les autres pays font de
+leurs algues, se demande si la France peut suivre, et construit une commandite portuaire qui transforme les déchets marins
+en gaz.
 
-> Au moment de la rédaction (24 novembre 2026), la transformation de Rubis reste un **projet soumis au vote** des
+> Au moment de la rédaction (26 novembre 2026), la transformation de Rubis reste un **projet soumis au vote** des
 > actionnaires et à une décision de l'AMF. Le résultat de l'assemblée du 9 décembre sera ajouté ici.
 
 ## 1. Un contrat né sur la mer
@@ -131,56 +132,127 @@ autant qu'elle les protège contre les prédateurs, et les études de marché ob
 contrôlées de cette façon. Elle n'a de sens que si la gérance s'engage réellement sur le long terme, ce que les fondateurs
 de Rubis ont fait pendant trente-six ans, mais qu'aucun statut ne garantit au-delà d'une génération.
 
-## 5. Une commandite pour la terre
+## 5. Une commandite pour la mer
 
 Le défaut que les marchés reprochent à la commandite devient en revanche une qualité lorsque l'actif est long et que son
-exploitant doit rester en place pendant des décennies. C'est exactement le cas d'une parcelle agroforestière, dont les
-noyers ne se vendent qu'au bout de quarante-cinq ans.
+exploitant doit rester en place pendant des décennies. La mer offre précisément ce type d'actifs, qu'il s'agisse d'une
+ferme marine, d'un port ou d'une unité qui transforme ses déchets en énergie, et c'est d'ailleurs en mer que la
+*commenda* est née. L'idée examinée ici est donc celle d'une filière qui cultiverait des algues, les transformerait en gaz
+par méthanisation et s'appuierait sur les infrastructures portuaires et sur l'aquaculture. Avant de la chiffrer, il faut
+toutefois regarder ce que font les pays qui cultivent déjà la mer.
 
-Le modèle reprend donc les flux du projet consacré à la terre, c'est-à-dire l'écart entre un hectare de blé associé à
-cinquante noyers et un hectare de blé seul, en année normale et avec les aides, ce qui donne une valeur actuelle de 2 228 €
-par hectare au prix central du bois de 600 €/m3. Les commanditaires, qui pourraient être des épargnants, une banque
-régionale ou un fonds, financent toutes les années où cet écart est négatif, c'est-à-dire la plantation puis la perte de
-récolte sous les arbres. L'exploitant devient commandité et s'engage à conduire les arbres jusqu'à la coupe. La
-répartition suit l'ordre de la *commenda* unilatérale, puisque les commanditaires récupèrent d'abord leurs apports
-capitalisés à 3 % par an, puis le surplus se partage à raison de trois quarts pour eux et d'un quart pour l'exploitant.
+### Ce que fait la Chine
 
-![Trésorerie d'une commandite agroforestière](sorties/4_commandite_tresorerie.png)
+La Chine a cultivé environ **24,3 millions de tonnes** d'algues fraîches en 2024, soit près de 63 % de la production
+mondiale, estimée à 38,8 millions de tonnes. La laminaire japonaise (*Saccharina japonica*) en représente à elle seule
+12,6 millions de tonnes, et la Chine en fournit plus de 90 % de la production mondiale. Depuis 2018, l'État a fait de
+l'aquaculture une priorité nationale sous le nom de « grenier bleu », avec plus de 180 « ranchs marins » de niveau
+national, des plateformes d'élevage en haute mer qui produisaient déjà 500 000 tonnes en 2024, et un quinzième plan
+quinquennal (2026-2030) qui regroupe ces dispositifs dans une nouvelle catégorie de « ranchs au large ».
 
-Dans le cas central, l'apport maximal des commanditaires atteint 3 748 € par hectare, soit 3,7 M€ pour un ensemble de
-1 000 hectares, et leur rendement interne s'établit à **5,8 %** par an. L'exploitant reçoit 3 990 € par hectare à la
-coupe sans avoir rien avancé, ce qui représente 683 € actualisés à 4 %. Le rendement des commanditaires reste supérieur à
-la rémunération préférentielle dans presque tous les cas, puisqu'il atteint 4,0 % si le bois se vend 300 €/m3 et 7,2 %
-s'il se vend 1 000 €/m3. Une crise du blé l'améliore même légèrement, à 6,4 %, car la perte de récolte sous les arbres
-coûte alors moins cher. En tirant cinq mille prix du bois autour de 600 €/m3, le rendement médian est de 5,9 %, compris
-entre 4,3 et 7,5 % du premier au dernier décile, et la probabilité de rester sous 3 % n'est que de 1 %.
+Ce qui frappe pourtant le plus, c'est l'usage que la Chine fait de cette biomasse. Elle ne la cultive pas pour en tirer de
+l'énergie, mais pour se nourrir, pour en extraire des alginates et surtout pour **nourrir la mer elle-même**. Dans la baie
+de Sanggou, dans le Shandong, la laminaire sert à la fois d'aliment aux ormeaux et de filtre qui absorbe leurs rejets
+dissous, tandis que les holothuries, placées dans les mêmes cages, consomment les particules qui tombent au fond. Cette
+aquaculture dite multitrophique, pratiquée aussi au Fujian, fait de l'algue la base d'une chaîne alimentaire cultivée,
+dans laquelle chaque espèce valorise les déchets de la précédente. La Chine s'est par ailleurs dotée en 2023 d'une méthode
+de comptabilité du carbone océanique et estime que ses cultures d'algues auraient évité 35 à 73 millions de tonnes de CO2
+entre 2003 et 2021. Ce chiffre reste toutefois une estimation de modèle, et l'organisme de certification Verra refuse pour
+l'instant de délivrer des crédits carbone pour la culture des laminaires.
 
-![Rendement des commanditaires selon le prix du bois](sorties/5_commandite_rendement.png)
+### Ce que font les autres pays
 
-On voit bien ici l'intérêt de la forme. Un prêt bancaire de quarante-cinq ans sans remboursement intermédiaire n'existe
-pas, et un fonds d'investissement classique exige une sortie au bout de sept à dix ans. La commandite, en revanche, lie la
-rémunération de chacun au résultat final et retient l'exploitant jusqu'au bout, puisque sa part n'existe qu'à la coupe.
+L'Indonésie cultive près de 10 millions de tonnes d'algues rouges, destinées pour l'essentiel aux carraghénanes, et la
+Corée du Sud et les Philippines en produisent chacune entre 1,4 et 1,7 million de tonnes. L'Europe reste en revanche à
+l'état de pilote. La Norvège comptait 566 concessions d'algoculture en 2024, mais n'en a récolté que 470 tonnes, et les
+Pays-Bas ont réalisé en juillet 2025 la première récolte d'une ferme de cinq hectares installée entre les éoliennes du parc
+Hollandse Kust Zuid, ce qui ouvre la voie à un partage de l'espace entre énergie et culture marine. La France récolte
+entre 60 000 et 70 000 tonnes d'algues sauvages par an, en Bretagne pour 95 %, mais n'en cultive que quelques centaines de
+tonnes. La feuille de route nationale de février 2025 vise 1 000 tonnes en 2027, alors que le programme breton Breizh'alg
+visait déjà 25 000 à 50 000 tonnes il y a plus de dix ans.
 
-## 6. Et pour la mer
+![Production d'algues par pays](sorties/5_algues_par_pays.png)
 
-Le même schéma conviendrait à une ferme aquacole, à un parc à huîtres ou à un navire de pêche, dont l'équipage est déjà
-rémunéré à la part. Le projet consacré à la mer ne contient toutefois pas de flux d'exploitation détaillés pour ces
-activités, et il aurait fallu les inventer pour construire le modèle. Cette commandite marine reste donc une piste, qui
-demanderait des comptes d'exploitation réels, par exemple ceux des centres de gestion conchylicoles ou des études de
-FranceAgriMer.
+### Ce que vaut une tonne d'algue
 
-## 7. Ce que cela donne ensemble
+La question décisive est donc celle de la valeur d'une tonne d'algue selon son usage. Une tonne de laminaire sucrée
+fraîche contient environ 15 % de matière sèche, dont les deux tiers sont organiques, et produit en méthanisation près de
+0,28 m3 de méthane par kilogramme de matière organique, ce qui donne **0,31 MWh** de gaz. Au tarif d'achat du biométhane
+injecté, cela représente 36 € par tonne, et entre 22 et 62 € si l'on vend ce gaz liquéfié aux navires. La même tonne vaut
+131 € comme matière première d'alginates et environ 1 000 € sur le marché alimentaire européen, alors qu'elle coûte entre
+**1 150 et 4 370 €** à produire en Europe selon une étude de 2026.
+
+![Valeur d'une tonne d'algue selon l'usage](sorties/4_valeur_tonne_algue.png)
+
+La méthanisation d'algues cultivées pour elles-mêmes ne peut donc pas être rentable, puisque le gaz rapporte de 32 à 121
+fois moins que ce que coûte l'algue. L'échelle le confirme d'ailleurs, car la totalité de la récolte française méthanisée
+ne donnerait que 20 GWh, soit la production de quatre petits méthaniseurs, et la production chinoise entière n'en
+donnerait que 7,6 TWh. Il n'est pas étonnant, dès lors, qu'aucun pays ne cultive les algues pour l'énergie. Le gaz ne peut
+venir que de ce qui reste une fois les usages les plus rémunérateurs servis, c'est-à-dire des résidus d'extraction des
+alginates, qui produisent encore 0,19 m3 de méthane par kilogramme de matière organique, et des déchets que la mer et les
+ports produisent de toute façon.
+
+### Une commandite portuaire
+
+Ces déchets existent pourtant en quantité. Les communes des Côtes-d'Armor ont ramassé 14 000 tonnes d'algues vertes
+échouées en 2024 et 8 000 tonnes en 2025, et l'État finance la totalité de ce ramassage et la moitié de leur traitement.
+Le mareyage transforme en coproduits de 30 à 60 % du poisson débarqué, et le port de Boulogne-sur-Mer en méthanise déjà
+une partie depuis 2009. Le gaz produit peut ensuite trouver trois débouchés au port, à savoir l'injection dans le réseau,
+le bio-GNL pour les navires, que le règlement européen FuelEU Maritime rend nécessaire puisqu'il impose de réduire
+l'intensité carbone des carburants marins de 2 % en 2025, de 6 % en 2030 et de 80 % en 2050, et enfin la chaleur, qui peut
+servir à l'aquaculture comme à Gravelines, où une ferme de bars et de daurades produit de 1 500 à 2 000 tonnes par an
+grâce à une eau réchauffée.
+
+Le modèle construit donc une commandite autour d'un méthaniseur portuaire de 5 GWh par an, alimenté par ces déchets et par
+les résidus d'algues. Les commanditaires, qui pourraient être le port, une banque régionale, des épargnants ou un
+distributeur d'énergie, financent l'investissement, estimé à 2,9 M€. L'exploitant, par exemple une coopérative de
+pêcheurs ou d'algoculteurs, devient commandité. Le gaz est vendu 116 € par MWh, au tarif d'achat fixé par l'arrêté du
+10 août 2026 pour les petites unités, et le coût complet de production retenu est celui de l'ADEME, de 90 à 125 € par MWh.
+La répartition suit, comme pour les marchands de Venise, l'ordre de la *commenda* unilatérale, puisque les commanditaires
+récupèrent d'abord leurs apports capitalisés à 3 % par an avant de partager le surplus à raison de trois quarts pour eux
+et d'un quart pour l'exploitant.
+
+Dans le cas central, le projet dégage une marge d'exploitation de 338 000 € par an et un rendement interne de 8,1 %. Les
+commanditaires obtiennent **7,2 %** et l'exploitant reçoit 427 000 € sur quinze ans sans avoir rien avancé. En tirant cinq
+mille fois le coût de production et le volume de déchets, le rendement médian des commanditaires atteint 6,9 %, compris
+entre 3,5 et 11,4 % du premier au dernier décile, et la probabilité de perte n'est que de 1 %.
+
+![Rendement d'une commandite portuaire](sorties/6_commandite_port.png)
+
+Ce résultat repose néanmoins sur deux conditions qu'il faut énoncer clairement. La première est que l'unité ne vit que de
+déchets, puisque 5 GWh exigeraient à eux seuls près de 24 000 tonnes de résidus d'algues, soit cent fois la production
+française actuelle d'algues cultivées. La seconde est le tarif d'achat lui-même, dont le guichet ouvert se ferme le
+31 décembre 2026, après quoi les projets passeront par des appels d'offres ou par des certificats de production de
+biogaz, dont la valeur n'est pas encore connue.
+
+Le cas de Rubis éclaire enfin cette piste d'une autre manière. Le groupe détenait 55 % de Rubis Terminal, devenu Tepsa,
+premier opérateur de stockage portuaire de France avec 4 millions de mètres cubes de capacité, et il a cédé cette
+participation au fonds I Squared Capital en octobre 2024 pour se concentrer sur la distribution d'énergie et
+l'électricité renouvelable. Les infrastructures portuaires, qui sont par nature des actifs longs, sont ainsi passées d'une
+commandite familiale à un fonds d'infrastructure, ce qui illustre bien la question que pose ce projet.
+
+### La France peut-elle suivre ?
+
+La France ne peut pas suivre la Chine sur les volumes. Ses coûts de main-d'œuvre, la concurrence des usages sur son
+littoral et la petite taille de sa filière l'en empêchent pour longtemps, et l'écart entre les objectifs de Breizh'alg et
+la production réelle montre que les plans de culture massive n'ont pas tenu. Elle peut en revanche suivre la Chine sur la
+méthode, en associant les algues aux élevages de coquillages qui occupent déjà son littoral pour produire de la biomasse
+destinée à la mer plutôt qu'à l'énergie, en partageant l'espace des parcs éoliens en mer comme le font les Pays-Bas, et en
+faisant de ses ports des lieux où les déchets marins deviennent du gaz pour les navires et de la chaleur pour
+l'aquaculture. C'est à cette échelle, celle d'un port et de ses exploitants, que la commandite retrouve tout son sens.
+
+## 6. Ce que cela donne ensemble
 
 Au terme de cette série, l'énergie, la mer et la terre se rejoignent sur un point. Les actifs qui les portent produisent
-sur vingt, trente ou quarante-cinq ans, alors que le système financier français sait surtout prêter à cinq ou sept ans et
-que l'épargne des ménages reste majoritairement placée sur des supports liquides. La commandite apporte une réponse
+sur quinze, trente ou quarante-cinq ans, alors que le système financier français sait surtout prêter à cinq ou sept ans
+et que l'épargne des ménages reste majoritairement placée sur des supports liquides. La commandite apporte une réponse
 ancienne à ce décalage, puisqu'elle associe celui qui attend et celui qui travaille sans imposer de calendrier de
 remboursement.
 
 Le cas de Rubis montre que cette forme sait durer et créer de la valeur, mais il montre aussi qu'elle coûte cher à défaire
 dès lors qu'elle sert à verrouiller le pouvoir plus qu'à porter un actif. Il ne s'agit donc pas de la défendre pour
 elle-même. Il s'agit plutôt de la réserver aux situations où l'engagement de durée de l'exploitant constitue l'actif
-lui-même, ce qui est le cas d'une parcelle plantée ou d'une ferme marine bien davantage que celui d'un groupe coté.
+lui-même, ce qui est le cas d'un port et de ses pêcheurs bien davantage que celui d'un groupe coté.
 
 ## Limites
 
@@ -192,8 +264,13 @@ lui-même, ce qui est le cas d'une parcelle plantée ou d'une ferme marine bien 
   gouvernance, qui sont précisément l'objet de la section 4.
 - Les indemnités sont évaluées au cours du 19 novembre 2026, qui évoluera d'ici l'assemblée.
 - La comparaison avec Michelin et Hermès porte sur trois sociétés et ne permet aucune conclusion causale.
-- La commandite agroforestière reprend toutes les hypothèses du projet consacré à la terre (rendements, prix, aides) et
-  ignore la fiscalité, les frais de gestion et le droit de l'offre au public, qui encadrerait l'appel à des épargnants.
+- Le coût de production des algues provient d'une seule étude européenne récente, et les potentiels méthane sont des
+  mesures de laboratoire, qui varient selon l'espèce, la saison et les prétraitements.
+- Les productions par pays mêlent des années (2022 à 2024) et des sources différentes ; le chiffre coréen n'a pas pu être
+  vérifié dans les données de la FAO, et la production française cultivée n'est connue qu'en ordre de grandeur.
+- Le méthaniseur portuaire repose sur le coût complet publié par l'ADEME en 2022 et sur une hypothèse, celle d'un
+  investissement qui représente 55 % de ce coût. Il ignore la fiscalité, les frais de gestion, la redevance qu'un port
+  percevrait pour le traitement des déchets et le droit de l'offre au public, qui encadrerait l'appel à des épargnants.
 - La transformation de Rubis n'est pas encore votée, et le texte sera mis à jour après le 9 décembre 2026.
 
 ## Reproduire
@@ -218,4 +295,26 @@ Packages R : dplyr, tidyr, ggplot2, scales. Le détail des sources figure dans `
 - Commandites cotées à Paris : [Tradingsat](https://www.tradingsat.com/actualites/informations-societes/avec-lagardere-quelles-sont-les-autres-societes-en-commandite-de-la-bourse-de-paris-965183.html), 2021.
 - *Commenda* : J. H. Pryor, « The Origins of the Commenda Contract », *Speculum*, vol. 52, n° 1, 1977 ;
   Y. González de Lara, « Enforceability and Risk-Sharing in Financial Contracts », *Journal of Economic History*, 2001.
-- Flux agroforestiers : projet [La France et la terre](https://github.com/leclercbaptiste1085-hash/5-france-terre).
+- Algues, Chine : [*Engineering Perspectives on Kelp Cultivation Structures in China*](https://doi.org/10.3390/jmse14191794), 2026 ;
+  [*IMTA in Sanggou Bay*](https://www.researchgate.net/publication/300002946_Integrated_multi-trophic_aquaculture_IMTA_in_Sanggou_Bay_China) ;
+  [Global Seafood Alliance](https://www.globalseafood.org/advocate/sea-cucumbers-enhance-imta-system-with-abalone-kelp-in-china/) ;
+  [Palladium](https://www.palladiummag.com/2026/08/04/china-is-building-a-blue-granary/) et [Xinhua](https://english.news.cn/20260425/ffd508ba5d3249888b54abe971c24292/c.html) (ranchs marins) ;
+  [*Reconceptualising seaweed cultivation in China*](https://www.tandfonline.com/doi/full/10.1080/17583004.2024.2349941) et [Dialogue Earth](https://dialogue.earth/en/ocean/18729-what-makes-chinas-blue-carbon-plans-different/) (carbone).
+- Autres pays : FAO, [*Quarterly seaweed analysis*](https://openknowledge.fao.org/server/api/core/bitstreams/aa6d8412-8825-46e2-b52c-bcf6fb952c83/content), février 2026 ;
+  [APEC](https://www.apec.org/apecapi/publication/getfile?publicationId=2597f5ec-e651-4c19-8e46-5c743dbd39bb) ;
+  [Norwegian Seaweed Association](https://www.sintef.no/contentassets/832f49925df24b0a84dff2eb5c1f9a7b/m-gjerstad--norwegian-seaweed-association.pdf) ;
+  [North Sea Farmers](https://www.northseafarmers.org/projects/nsf1).
+- France : [feuille de route algoculture](https://www.mer.gouv.fr/sites/default/files/2025-02/feuille_de_route_algues_fevrier_2025pdf.pdf), février 2025 ;
+  [Bretagne Pêche](https://www.bretagne-peches.org/recolte-dalgues-et-algoculture-en-bretagne/) ;
+  préfecture des [Côtes-d'Armor](https://www.cotes-darmor.gouv.fr/Actions-de-l-Etat/Mer-littoral-et-securite-maritime/Algues-vertes-Bilan-2024-perspectives-2025) (algues vertes).
+- Coûts et valeur des algues : [*Frontiers in Aquaculture*](https://www.frontiersin.org/journals/aquaculture/articles/10.3389/faquc.2026.1998334/full), 2026 ;
+  [*Roadmap to sustainably develop the European seaweed industry*](https://www.nature.com/articles/s44183-025-00122-9), 2025 ;
+  [*Frontiers in Marine Science*](https://www.frontiersin.org/articles/10.3389/fmars.2022.948086), 2022 (alginates et résidus).
+- Méthane : [*Anaerobic digestion of macroalgae*](https://iwaponline.com/wst/article/64/8/1723/31575/Anaerobic-digestion-of-macroalgae-methane) ;
+  [Ifremer](https://archimer.ifremer.fr/doc/00000/4810) et [INRAE](https://hal.inrae.fr/hal-02629401) (ulves).
+- Gaz : [arrêté du 10 août 2026](https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054678196) ; [CRE](https://cre.fr/fileadmin/Documents/Rapports_et_etudes/2024/Rapport_Bilan_technique_economique_biomethane_injecte.pdf) ;
+  [S&P Global](https://www.spglobal.com/commodity-insights/en/news-research/latest-news/lng/070924-bio-lng-bunker-fuel-key-to-supporting-lngs-future-in-stricter-maritime-emissions-climate) et [Argus](https://www.argusmedia.com/-/media/project/argusmedia/mainsite/english/documents-and-files/topical-market-themes/alternative-marine-fuels/bio-lng-price-faq.pdf) (bio-GNL, FuelEU Maritime).
+- Ports et aquaculture : [Enerzine](https://www.enerzine.com/les-dechets-de-poissons-transformes-en-biogaz/6719-2009-04) (Boulogne-sur-Mer) ;
+  [Institut Agro](https://halieutique.institut-agro.fr/files/fichiers/memoires/222309.pdf) (coproduits du mareyage) ;
+  [Gloria Maris, Gravelines](https://cpdp.debatpublic.fr/cpdp-portdedunkerque/images/Contributions/Contribution-_AQUANORD_ET_ECLOSERIE_MARINE_DE_GRAVELINES-ICHTUS-21122017.pdf) ;
+  Rubis, [cession de Rubis Terminal](https://www.rubis.fr/en/communique/rubis-rubis-completes-the-sale-of-its-55-stake-in-rubis-terminal-now-branded-tepsa/), octobre 2024.

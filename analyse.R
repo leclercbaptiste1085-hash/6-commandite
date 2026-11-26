@@ -184,31 +184,17 @@ g3 <- ggplot(comp, aes(date, base, colour = nom)) + geom_line(linewidth = 0.5) +
        x = NULL, y = NULL, caption = "Sources : cours Yahoo Finance, calculs de l'auteur. Les dividendes ne sont pas réinvestis, ce qui désavantage Rubis, dont le rendement est le plus élevé.")
 enregistrer(g3, "3_commandites_cac40.png")
 
+
 # ---------------------------------------------------------------------------
-# 5. Une commandite type pour la terre
-#    Actif : l'écart de flux entre un hectare de blé et de noyers et un hectare de blé seul (projet 07,
-#    07-terre/analyse.R, blé année normale, avec aides). Les commanditaires financent les années négatives
-#    (plantation, perte de récolte sous les arbres) ; l'exploitant commandité conduit les arbres pendant 45 ans.
-#    Cascade : les commanditaires récupèrent d'abord leurs apports capitalisés à un taux préférentiel,
-#    le surplus est ensuite partagé trois quarts / un quart, comme dans la commenda unilatérale médiévale.
+# 5. Une commandite pour la mer
+#    Trois questions : ce que vaut une tonne d'algue selon son usage, ce que produisent la Chine et les autres pays,
+#    et ce que rapporterait une commandite portuaire de méthanisation alimentée par des déchets marins.
+#    Toutes les hypothèses sont sourcées dans le README ; celles qui ne le sont pas sont marquées « hypothèse ».
 # ---------------------------------------------------------------------------
-ha <- list(duree = 45, produit = 1500, charges = 1600, part_intr = 0.31, plant = 1750, aide_plant = 0.70,
-           entretien = 25, emprise = 0.05, perte_fin = 0.20, debut_perte = 15, bois_m3 = 40, plaq_m3 = 80,
-           plaq_an = 22.5, plaq_net = 7.5)
-ecart_ha <- function(prix_bois, produit = ha$produit) {
-  t <- 0:ha$duree
-  rdt <- ifelse(t <= ha$debut_perte, 1, 1 - ha$perte_fin * (t - ha$debut_perte) / (ha$duree - ha$debut_perte))
-  perte_ble <- ifelse(t == 0, 0, produit * (1 - (1 - ha$emprise) * rdt) - ha$charges * ha$part_intr * ha$emprise)
-  arbres <- ifelse(t == 0, -ha$plant * (1 - ha$aide_plant), -ha$entretien) +
-    ifelse(t >= 20 & t < ha$duree, ha$plaq_an * ha$plaq_net, 0) +
-    ifelse(t == ha$duree, ha$bois_m3 * prix_bois + ha$plaq_m3 * ha$plaq_net, 0)
-  arbres - perte_ble
-}
+rouge <- "#B03A2E"
 van <- function(x, r = 0.04) sum(x / (1 + r)^(seq_along(x) - 1))
 tri <- function(x) tryCatch(uniroot(function(r) van(x, r), c(-0.5, 0.5))$root, error = function(e) NA_real_)
-stopifnot(abs(van(ecart_ha(600)) - 2228) < 1)          # même résultat que le projet 07 (bois central, 600 €/m3)
-
-cascade <- function(e, pref = 0.03, part_cmd = 0.25) {
+cascade <- function(e, pref = 0.03, part_cmd = 0.25) {   # commenda unilatérale : apports rendus d'abord, puis 3/4 - 1/4
   solde <- 0; cmt <- cmd <- numeric(length(e))
   for (i in seq_along(e)) {
     solde <- solde * (1 + pref)
@@ -219,46 +205,87 @@ cascade <- function(e, pref = 0.03, part_cmd = 0.25) {
   }
   data.frame(t = seq_along(e) - 1, ecart = e, commanditaires = cmt, commandites = cmd)
 }
-centre <- cascade(ecart_ha(600))
-note("Commandite agroforestière, bois à 600 €/m3 : TRI de l'écart %.1f %%, TRI des commanditaires %.1f %%, apport maximal %.0f €/ha",
-     100 * tri(centre$ecart), 100 * tri(centre$commanditaires), -min(cumsum(centre$commanditaires)))
-note("Part des commandités : %.0f €/ha à la coupe, soit %.0f € actualisés à 4 %% ; pour 1 000 ha, apport des commanditaires %.1f M€",
-     sum(centre$commandites), van(centre$commandites), -min(cumsum(centre$commanditaires)) * 1000 / 1e6)
-for (p in c(300, 1000)) { x <- cascade(ecart_ha(p))
-  note("Bois à %d €/m3 : TRI des commanditaires %.1f %%, part des commandités %.0f €/ha", p, 100 * tri(x$commanditaires), sum(x$commandites)) }
-x <- cascade(ecart_ha(600, produit = 1200))
-note("Blé en crise (1 200 €/ha), bois à 600 : TRI des commanditaires %.1f %%", 100 * tri(x$commanditaires))
 
-set.seed(2)
-prix_sim <- 600 * exp(rnorm(5000, 0, 0.47))          # 10-90 % ≈ 330-1 100 €/m3, autour de la fourchette du projet 07
-tri_sim <- sapply(prix_sim, function(p) tri(cascade(ecart_ha(p))$commanditaires))
-note("Prix du bois incertain (médiane 600 €/m3) : TRI médian des commanditaires %.1f %%, 10-90 %% : %.1f à %.1f %%, probabilité de rester sous 3 %% : %.0f %%",
-     100 * median(tri_sim), 100 * quantile(tri_sim, .1), 100 * quantile(tri_sim, .9), 100 * mean(tri_sim < 0.03))
+# 5.1 Ce que vaut une tonne de laminaire fraîche (Saccharina latissima), en euros
+ms <- 0.15; mo <- 0.67; ch4 <- 0.28; pcs <- 11.06          # matière sèche, part organique, m3 CH4/kg MO, kWh PCS/m3
+mwh_t <- 1000 * ms * mo * ch4 * pcs / 1000                 # MWh PCS par tonne fraîche
+usages <- tibble(
+  usage = c("Biométhane injecté (116 €/MWh)", "Bio-GNL marin (70 à 200 €/MWh)", "Matière première d'alginates",
+            "Alimentation humaine (Europe)"),
+  bas  = c(mwh_t * 116, mwh_t * 70, 950 * 0.92 * ms, 1000),
+  haut = c(mwh_t * 116, mwh_t * 200, 950 * 0.92 * ms, 1000))
+note("Laminaire : %.2f MWh PCS de méthane par tonne fraîche ; valeur en biométhane %.0f €/t, en bio-GNL %.0f à %.0f €/t, en alginates %.0f €/t",
+     mwh_t, mwh_t * 116, mwh_t * 70, mwh_t * 200, 950 * 0.92 * ms)
+note("Coût de production européen : 1 150 à 4 370 €/t fraîche, soit %.0f à %.0f fois la valeur énergétique",
+     1150 / (mwh_t * 116), 4370 / (mwh_t * 116))
+note("Toute la récolte française (65 000 t) méthanisée : %.0f GWh ; toute la production chinoise (24,3 Mt) : %.1f TWh",
+     65000 * mwh_t / 1000, 24.3e6 * mwh_t / 1e6)
 
-cum <- centre |> transmute(t, Commanditaires = cumsum(commanditaires), Commandités = cumsum(commandites)) |>
-  tidyr::pivot_longer(-t, names_to = "partie", values_to = "cumul")
-g4 <- ggplot(cum, aes(t, cumul, colour = partie)) +
-  geom_hline(yintercept = 0, colour = encre, linewidth = 0.3) + geom_step(linewidth = 0.9) +
-  geom_text(data = filter(cum, t == max(t)), aes(label = partie), hjust = -0.1, family = "Calibri", size = 3.8) +
-  scale_colour_manual(values = c(Commanditaires = bleu, Commandités = vert)) +
-  scale_y_continuous(labels = label_number(suffix = " €", big.mark = " ")) +
-  scale_x_continuous(breaks = seq(0, 45, 5), expand = expansion(mult = c(0.01, 0.15))) +
-  labs(title = "Les commanditaires portent seuls l'attente de quarante-cinq ans, puis partagent la coupe",
-       subtitle = "Trésorerie cumulée par hectare d'une commandite agroforestière, en euros constants non actualisés (bois à 600 €/m3)",
-       x = "Années après la plantation", y = NULL,
-       caption = paste0("Sources : flux du projet 07 (blé et noyers contre blé seul, année normale, avec aides), calculs de l'auteur.",
-                        "\nCascade : apports rendus d'abord avec 3 % par an, puis surplus partagé trois quarts aux commanditaires, un quart à l'exploitant commandité."))
-enregistrer(g4, "4_commandite_tresorerie.png", l = 9.5, h = 5.4)
-
-g5 <- ggplot(data.frame(tri = 100 * tri_sim), aes(tri)) +
-  geom_histogram(bins = 50, fill = bleu, colour = papier, linewidth = 0.1) +
-  geom_vline(xintercept = 3, colour = vert, linewidth = 0.8) +
-  annotate("text", x = 3.1, y = Inf, vjust = 1.5, hjust = 0, colour = vert, family = "Calibri", label = "taux préférentiel\n3 %") +
-  scale_x_continuous(labels = label_number(suffix = " %", decimal.mark = ",")) + scale_y_continuous(labels = NULL) +
-  labs(title = "Le rendement des commanditaires se joue sur le prix futur du bois",
-       subtitle = "Taux de rendement interne des commanditaires sur 5 000 tirages du prix du bois de noyer",
+g4 <- ggplot(usages, aes(y = reorder(usage, haut))) +
+  annotate("rect", xmin = 1150, xmax = 4370, ymin = -Inf, ymax = Inf, fill = "#FDF1EF") +
+  annotate("text", x = 2240, y = "Biométhane injecté (116 €/MWh)", vjust = 2.6, label = "coût de production en Europe",
+           colour = rouge, family = "Calibri", size = 3.4) +
+  geom_segment(aes(x = bas, xend = haut, yend = usage), colour = bleu, linewidth = 4, lineend = "round") + geom_point(aes(x = haut), colour = bleu, size = 4) +
+  geom_text(aes(x = haut, label = paste0(format(round(haut), big.mark = " "), " €")), hjust = -0.35, family = "Calibri", size = 3.6, colour = encre) +
+  scale_x_log10(labels = label_number(suffix = " €", big.mark = " "), limits = c(10, 6000)) +
+  labs(title = "Une tonne d'algue vaut trente fois moins en méthane qu'elle ne coûte à produire",
+       subtitle = "Valeur d'une tonne de laminaire fraîche selon son usage, en euros, échelle logarithmique",
        x = NULL, y = NULL,
-       caption = "Sources : flux du projet 07, calculs de l'auteur. Prix du bois tiré autour d'une médiane de 600 €/m3 (10 % des tirages sous 330 €, 10 % au-dessus de 1 100 €).")
-enregistrer(g5, "5_commandite_rendement.png", l = 9.5, h = 5.4)
+       caption = paste("Sources : coûts Frontiers in Aquaculture (2026) ; méthane INRAE, Ifremer et revues (0,28 m3 CH4/kg MO) ; tarif de l'arrêté du 10 août 2026 ;",
+                       "\nbio-GNL S&P Global (21 à 60 $/GJ) ; alginates 950 $/t sèche ; prix alimentaire npj Ocean Sustainability (2025). Calculs de l'auteur.")) +
+  theme(panel.grid.major.x = element_line(colour = "#E3E8EE"), panel.grid.major.y = element_blank())
+enregistrer(g4, "4_valeur_tonne_algue.png", l = 9.5, h = 5)
+
+# 5.2 Qui cultive les algues
+pays <- tribble(~pays, ~tonnes, ~precision,
+  "Chine", 24.3e6, "cultivées, 2024", "Indonésie", 9.6e6, "cultivées, 2022", "Corée du Sud", 1.7e6, "cultivées, vers 2022",
+  "Philippines", 1.4e6, "cultivées, 2022", "France (récolte sauvage)", 65000, "sauvages, Bretagne",
+  "Norvège", 470, "cultivées, 2024", "France (algoculture)", 200, "cultivées, ordre de grandeur")
+g5 <- ggplot(pays, aes(tonnes, reorder(pays, tonnes), colour = grepl("France", pays))) +
+  geom_segment(aes(x = 100, xend = tonnes, yend = reorder(pays, tonnes)), linewidth = 6) +
+  geom_text(aes(label = paste0(format(tonnes, big.mark = " ", scientific = FALSE), " t (", precision, ")")),
+            hjust = -0.05, family = "Calibri", size = 3.4, colour = encre, nudge_x = 0.05) +
+  scale_colour_manual(values = c(`TRUE` = rouge, `FALSE` = bleu)) +
+  scale_x_log10(labels = label_number(big.mark = " "), limits = c(100, 5e9), breaks = 10^c(2, 4, 6, 8)) +
+  labs(title = "La Chine cultive plus de cent mille fois plus d'algues que la France",
+       subtitle = "Production d'algues marines en tonnes fraîches, échelle logarithmique",
+       x = NULL, y = NULL,
+       caption = "Sources : FAO et Journal of Marine Science and Engineering (2026) ; APEC ; Norwegian Seaweed Association ; feuille de route algues (2025) ; Bretagne Pêche.") +
+  theme(panel.grid.major.x = element_line(colour = "#E3E8EE"), panel.grid.major.y = element_blank())
+enregistrer(g5, "5_algues_par_pays.png", l = 9.5, h = 5)
+
+# 5.3 Une commandite portuaire de méthanisation (déchets marins : ulves échouées, coproduits de la marée, résidus d'algues)
+#     Taille 5 GWh PCS/an, sous le seuil du tarif d'achat (116 €/MWh, contrat de 15 ans).
+#     Coût complet de production ADEME 2022 : 90 à 125 €/MWh. Hypothèse : 55 % de ce coût rémunère l'investissement
+#     (annuité à 6 % sur 15 ans), le reste est de l'exploitation.
+E <- 5000; TARIF <- 116; DUREE <- 15
+crf <- 0.06 / (1 - 1.06^-DUREE)
+flux_port <- function(lcoe = 107.5, volume = 1, part_capex = 0.55) {
+  capex <- part_capex * lcoe * E / crf
+  c(-capex, rep(volume * E * (TARIF - (1 - part_capex) * lcoe), DUREE))
+}
+centre <- cascade(flux_port())
+note("Méthaniseur portuaire de 5 GWh : investissement %.1f M€, marge d'exploitation %.0f k€/an ; TRI du projet %.1f %%, des commanditaires %.1f %%",
+     -flux_port()[1] / 1e6, flux_port()[2] / 1e3, 100 * tri(centre$ecart), 100 * tri(centre$commanditaires))
+note("Part de l'exploitant commandité : %.0f k€ sur 15 ans", sum(centre$commandites) / 1e3)
+set.seed(3)
+sim <- tibble(lcoe = runif(5000, 90, 125), volume = pmin(rnorm(5000, 1, 0.15), 1.2))
+sim$tri_cmt <- mapply(function(l, v) tri(cascade(flux_port(l, v))$commanditaires), sim$lcoe, sim$volume)
+note("Coût incertain (90-125 €/MWh) et volume de déchets incertain (± 15 %%) : TRI médian des commanditaires %.1f %%, 10-90 %% : %.1f à %.1f %%, probabilité de perte %.0f %%",
+     100 * median(sim$tri_cmt, na.rm = TRUE), 100 * quantile(sim$tri_cmt, .1, na.rm = TRUE), 100 * quantile(sim$tri_cmt, .9, na.rm = TRUE),
+     100 * mean(is.na(sim$tri_cmt) | sim$tri_cmt < 0))
+note("Résidus d'algues nécessaires pour 5 GWh à eux seuls (0,19 m3 CH4/kg MO après extraction) : %.0f t fraîches",
+     E / (1000 * ms * mo * 0.19 * pcs / 1000))
+
+g6 <- ggplot(sim, aes(100 * tri_cmt)) + geom_histogram(bins = 50, fill = bleu, colour = papier, linewidth = 0.1) +
+  geom_vline(xintercept = 0, colour = rouge, linewidth = 0.8) + geom_vline(xintercept = 3, colour = vert, linewidth = 0.8) +
+  annotate("text", x = 3.2, y = Inf, vjust = 1.5, hjust = 0, colour = vert, family = "Calibri", label = "rémunération préférentielle 3 %") +
+  scale_x_continuous(labels = label_number(suffix = " %", decimal.mark = ",")) + scale_y_continuous(labels = NULL) +
+  labs(title = "Une commandite de méthanisation portuaire ne vit que de déchets et du tarif d'achat",
+       subtitle = "Rendement interne des commanditaires d'un méthaniseur portuaire de 5 GWh sur 5 000 tirages du coût et du volume de déchets",
+       x = NULL, y = NULL,
+       caption = paste("Sources : tarif d'achat de 116 €/MWh (arrêté du 10 août 2026), coût complet de 90 à 125 €/MWh (ADEME, 2022), calculs de l'auteur.",
+                       "\nHypothèse : 55 % du coût complet rémunère l'investissement. Cascade : apports rendus avec 3 % par an, puis 3/4 aux commanditaires, 1/4 à l'exploitant."))
+enregistrer(g6, "6_commandite_port.png", l = 9.5, h = 5.2)
 
 close(res)
