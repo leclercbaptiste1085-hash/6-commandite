@@ -164,9 +164,7 @@ l'instant de délivrer des crédits carbone pour la culture des laminaires.
 
 L'Indonésie cultive près de 10 millions de tonnes d'algues rouges, destinées pour l'essentiel aux carraghénanes, et la
 Corée du Sud et les Philippines en produisent chacune entre 1,4 et 1,7 million de tonnes. L'Europe reste en revanche à
-l'état de pilote. La Norvège comptait 566 concessions d'algoculture en 2024, mais n'en a récolté que 470 tonnes, et les
-Pays-Bas ont réalisé en juillet 2025 la première récolte d'une ferme de cinq hectares installée entre les éoliennes du parc
-Hollandse Kust Zuid, ce qui ouvre la voie à un partage de l'espace entre énergie et culture marine. La France récolte
+l'état de pilote. La Norvège comptait 566 concessions d'algoculture en 2024, mais n'en a récolté que 470 tonnes. La France récolte
 entre 60 000 et 70 000 tonnes d'algues sauvages par an, en Bretagne pour 95 %, mais n'en cultive que quelques centaines de
 tonnes. La feuille de route nationale de février 2025 vise 1 000 tonnes en 2027, alors que le programme breton Breizh'alg
 visait déjà 25 000 à 50 000 tonnes il y a plus de dix ans.
@@ -237,7 +235,7 @@ La France ne peut pas suivre la Chine sur les volumes. Ses coûts de main-d'œuv
 littoral et la petite taille de sa filière l'en empêchent pour longtemps, et l'écart entre les objectifs de Breizh'alg et
 la production réelle montre que les plans de culture massive n'ont pas tenu. Elle peut en revanche suivre la Chine sur la
 méthode, en associant les algues aux élevages de coquillages qui occupent déjà son littoral pour produire de la biomasse
-destinée à la mer plutôt qu'à l'énergie, en partageant l'espace des parcs éoliens en mer comme le font les Pays-Bas, et en
+destinée à la mer plutôt qu'à l'énergie, et en
 faisant de ses ports des lieux où les déchets marins deviennent du gaz pour les navires et de la chaleur pour
 l'aquaculture. C'est à cette échelle, celle d'un port et de ses exploitants, que la commandite retrouve tout son sens.
 
@@ -302,8 +300,7 @@ Packages R : dplyr, tidyr, ggplot2, scales. Le détail des sources figure dans `
   [*Reconceptualising seaweed cultivation in China*](https://www.tandfonline.com/doi/full/10.1080/17583004.2024.2349941) et [Dialogue Earth](https://dialogue.earth/en/ocean/18729-what-makes-chinas-blue-carbon-plans-different/) (carbone).
 - Autres pays : FAO, [*Quarterly seaweed analysis*](https://openknowledge.fao.org/server/api/core/bitstreams/aa6d8412-8825-46e2-b52c-bcf6fb952c83/content), février 2026 ;
   [APEC](https://www.apec.org/apecapi/publication/getfile?publicationId=2597f5ec-e651-4c19-8e46-5c743dbd39bb) ;
-  [Norwegian Seaweed Association](https://www.sintef.no/contentassets/832f49925df24b0a84dff2eb5c1f9a7b/m-gjerstad--norwegian-seaweed-association.pdf) ;
-  [North Sea Farmers](https://www.northseafarmers.org/projects/nsf1).
+  [Norwegian Seaweed Association](https://www.sintef.no/contentassets/832f49925df24b0a84dff2eb5c1f9a7b/m-gjerstad--norwegian-seaweed-association.pdf).
 - France : [feuille de route algoculture](https://www.mer.gouv.fr/sites/default/files/2025-02/feuille_de_route_algues_fevrier_2025pdf.pdf), février 2025 ;
   [Bretagne Pêche](https://www.bretagne-peches.org/recolte-dalgues-et-algoculture-en-bretagne/) ;
   préfecture des [Côtes-d'Armor](https://www.cotes-darmor.gouv.fr/Actions-de-l-Etat/Mer-littoral-et-securite-maritime/Algues-vertes-Bilan-2024-perspectives-2025) (algues vertes).
